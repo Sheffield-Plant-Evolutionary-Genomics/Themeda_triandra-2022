@@ -94,6 +94,11 @@ The TtPh16-4 genome assembly completeness was estimated using BUSCO v.3.1.0 (Sim
 
 Example submission script = busco.sh
 
+`perl fasta_stats.pl ragtag.scaffold.fasta`
+
+Required perl script = fastaNamesSizes.pl (by Joseph Fass)
+
+
 <br/><br/>
 **References**
 Alonge, M., Lebeigle, L., Kirsche, M., Aganezov, S., Wang, X., Lippman, Z., ... & Soyk, S. (2021). Automated assembly scaffolding elevates a new tomato system for high-throughput genome editing. BioRxiv.
