@@ -21,16 +21,21 @@ Required Control file = config.txt
 Required Seed alingment = Seed1.fasta 
 
 <br/><br/>
-[2] The mitochondrial genome was manually assembled from the PacBio contigs. In brief, the complete set of mitochondrial genes was extracted from a Sorghum bicolor mitochondrial assembly (NC_008360.1) and used as a Blastn v.2.8.1 query to identify the top-hit TtPh16-4 contig for each gene. These contigs were then truncated to the matching regions, retaining the intergenic regions if multiple loci were present on a single contig. Finally, duplicated regions were removed and the remaining contigs concatenated into a single pseudomolecule with gaps represented by 100 Ns. The completeness of the TtPh16-4 mitochondrial genome was estimated using the MITOFY v.1.3.1 webserver (Alverson et al., 2010).
+[2] The mitochondrial genome was manually assembled from the PacBio contigs in Geneious v.5.3.6 (Kearse et al., 2012). In brief, the complete set of mitochondrial genes was extracted from a Sorghum bicolor mitochondrial assembly (NC_008360.1) and used as a Blastn v.2.8.1 query to identify the top-hit TtPh16-4 contig for each gene. These contigs were then truncated to the matching regions, retaining the intergenic regions if multiple loci were present on a single contig. Finally, duplicated regions were removed and the remaining contigs concatenated into a single pseudomolecule with gaps represented by 100 Ns. The completeness of the TtPh16-4 mitochondrial genome was estimated using the MITOFY v.1.3.1 webserver (Alverson et al., 2010).
 
+`makeblastdb -in Canu_assembly.fasta -dbtype nucl`
 
+`blastn -db Canu_assembly.fasta -query Gene_Features_NC_008360.1.fa -outfmt 6 > Mt_Blast_raw`
 
+`cat Mt_Blast_raw | awk '!seen[$1]++' | cut -f 2 | sort | uniq | while read line ; do grep "$line" -A 1 ${nuGenome} >>  mtScaffolds.fa ; done`
 
 
 
 <br/><br/>
 
 **References**
+
+Alverson, A. J., Wei, X., Rice, D. W., Stern, D. B., Barry, K., & Palmer, J. D. (2010). Insights into the evolution of mitochondrial genome size from complete sequences of Citrullus lanatus and Cucurbita pepo (Cucurbitaceae). Molecular biology and evolution, 27(6), 1436-1448.
 
 Dierckxsens, N., Mardulyn, P., & Smits, G. (2017). NOVOPlasty: de novo assembly of organelle genomes from whole genome data. Nucleic acids research, 45, e18-e18.
 
