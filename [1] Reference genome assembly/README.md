@@ -66,15 +66,24 @@ Contigs containing organellar DNA were first identified using Blastn, with a  mi
 <br/><br/>
 
 **[4] Homology based scaffolding.** 
+
 The organelle masked contigs were then scaffolded in relation to the genome of Sorghum bicolor (GenBank accession: GCA_000003195.3), a closely related grass from the same tribe (Andropogoneae), using RagTag v.2.1.0 (Alonge et al., 2021).
 
 `ragtag_scaffold.py -o OUTDIR -u chr_Sorghum.fasta Themeda_triandra_TTPH-organelle-masked.fasta`
 
 Example submission script = ragtag.sh
 
+<br/><br/>
+**[6] Removing scaffolds with <500bp of sequence info.** 
+
+We removed scaffolds that were either very short or had a majority of their coding sequences masked by RepeatMasker that <500bp of unambigious sequence remained.  
+
 
 <br/><br/>
+**[5] Assessing assembly quality.** 
+The TtPh16-4 genome assembly completeness was estimated using BUSCO v.3.1.0 (Simão et al., 2015) with the poales_odb10 database, and by comparing the assembly size to the 1C genome size 
 
+<br/><br/>
 **References**
 Alonge, M., Lebeigle, L., Kirsche, M., Aganezov, S., Wang, X., Lippman, Z., ... & Soyk, S. (2021). Automated assembly scaffolding elevates a new tomato system for high-throughput genome editing. BioRxiv.
 
