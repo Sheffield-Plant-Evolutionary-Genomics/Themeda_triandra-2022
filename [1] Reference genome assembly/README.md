@@ -63,10 +63,16 @@ Contigs containing organellar DNA were first identified using Blastn, with a  mi
 `cat Scaffolds_no_mask.fasta Scaffolds_to_mask.fasta.masked > Themeda_triandra_TTPH-organelle-masked.fasta`
 
 
+<br/><br/>
+
+**[4] Homology based scaffolding.** 
+The organelle masked contigs were then scaffolded in relation to the genome of Sorghum bicolor (GenBank accession: GCA_000003195.3), a closely related grass from the same tribe (Andropogoneae), using RagTag v.2.1.0 (Alonge et al., 2021).
+
 
 <br/><br/>
 
 **References**
+Alonge, M., Lebeigle, L., Kirsche, M., Aganezov, S., Wang, X., Lippman, Z., ... & Soyk, S. (2021). Automated assembly scaffolding elevates a new tomato system for high-throughput genome editing. BioRxiv.
 
 Alverson, A. J., Wei, X., Rice, D. W., Stern, D. B., Barry, K., & Palmer, J. D. (2010). Insights into the evolution of mitochondrial genome size from complete sequences of Citrullus lanatus and Cucurbita pepo (Cucurbitaceae). Molecular biology and evolution, 27(6), 1436-1448.
 
@@ -75,3 +81,6 @@ Dierckxsens, N., Mardulyn, P., & Smits, G. (2017). NOVOPlasty: de novo assembly 
 Kearse, M., Moir, R., Wilson, A., Stones-Havas, S., Cheung, M., Sturrock, S., ... & Drummond, A. (2012). Geneious Basic: an integrated and extendable desktop software platform for the organization and analysis of sequence data. Bioinformatics, 28, 1647-1649.
 
 Koren, S., Walenz, B. P., Berlin, K., Miller, J. R., Bergman, N. H., & Phillippy, A. M. (2017). Canu: scalable and accurate long-read assembly via adaptive k-mer weighting and repeat separation. Genome research, 27(5), 722-736.
+
+Smit AFA, Hubley R, Green P (2013) RepeatMasker Open-4.0. <http://www.repeatmasker.org>.
+
