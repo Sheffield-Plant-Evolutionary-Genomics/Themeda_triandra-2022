@@ -13,7 +13,9 @@ Example submission script = canu_TTPH.sh
 `perl NOVOPlasty4.3.1.pl -c config.txt`
 
 Example submission script = cpGENOME.sh
+
         Required Control file = config.txt
+
         Required Seed alingment = Seed1.fasta 
 
 
