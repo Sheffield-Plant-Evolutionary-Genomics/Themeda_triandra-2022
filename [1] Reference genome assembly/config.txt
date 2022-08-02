@@ -1,0 +1,33 @@
+Project:
+-----------------------
+Project name          = TTPH
+Type                  = chloro
+Genome Range          = 120000-200000
+K-mer                 = 33
+Max memory            = 16
+Extended log          = 0
+Save assembled reads  = no
+Seed Input            = Seed1.fasta
+Extend seed directly  = no
+Reference sequence    = 
+Variance detection    = no
+Heteroplasmy          = 
+HP exclude list       =
+Chloroplast sequence  = 
+
+Dataset 1:
+-----------------------
+Read Length           = 150
+Insert size           = 300
+Platform              = illumina
+Single/Paired         = PE
+Combined reads        =
+Forward reads         = /shared/christin_lab1/genome_data/Cleaned_Data/Illumina/Sam_Andropogoneae_genomes/Themeda_GCCAAT_prinseq_1.fastq.gz
+Reverse reads         = /shared/christin_lab1/genome_data/Cleaned_Data/Illumina/Sam_Andropogoneae_genomes/Themeda_GCCAAT_prinseq_2.fastq.gz
+
+Optional:
+-----------------------
+Insert size auto      = yes
+Use Quality Scores    = no
+
+
