@@ -90,6 +90,10 @@ Required perl script = fastaNamesSizes.pl (by Lionel Guy)
 **[5] Assessing assembly quality.** 
 The TtPh16-4 genome assembly completeness was estimated using BUSCO v.3.1.0 (Simão et al., 2015) with the poales_odb10 database, and by comparing the assembly size to the 1C genome size 
 
+`busco --in ragtag.scaffold.fasta --lineage_path poales_odb10 --out ragtag.scaffold.500 --mode geno --tarzip` 
+
+Example submission script = busco.sh
+
 <br/><br/>
 **References**
 Alonge, M., Lebeigle, L., Kirsche, M., Aganezov, S., Wang, X., Lippman, Z., ... & Soyk, S. (2021). Automated assembly scaffolding elevates a new tomato system for high-throughput genome editing. BioRxiv.
@@ -101,6 +105,8 @@ Dierckxsens, N., Mardulyn, P., & Smits, G. (2017). NOVOPlasty: de novo assembly 
 Kearse, M., Moir, R., Wilson, A., Stones-Havas, S., Cheung, M., Sturrock, S., ... & Drummond, A. (2012). Geneious Basic: an integrated and extendable desktop software platform for the organization and analysis of sequence data. Bioinformatics, 28, 1647-1649.
 
 Koren, S., Walenz, B. P., Berlin, K., Miller, J. R., Bergman, N. H., & Phillippy, A. M. (2017). Canu: scalable and accurate long-read assembly via adaptive k-mer weighting and repeat separation. Genome research, 27(5), 722-736.
+
+Simão, F. A., Waterhouse, R. M., Ioannidis, P., Kriventseva, E. V., & Zdobnov, E. M. (2015). BUSCO: assessing genome assembly and annotation completeness with single-copy orthologs. Bioinformatics, 31(19), 3210-3212.
 
 Smit AFA, Hubley R, Green P (2013) RepeatMasker Open-4.0. <http://www.repeatmasker.org>.
 
