@@ -78,6 +78,13 @@ Example submission script = ragtag.sh
 
 We removed scaffolds that were either very short or had a majority of their coding sequences masked by RepeatMasker that <500bp of unambigious sequence remained.  
 
+`sed '/^>/! s/N//g' ragtag.scaffold.fasta > ragtag.scaffold.fast.no_N` 
+
+`perl fastaNamesSizes.pl ragtag.scaffold.fasta | awk '$2<500' | cut -f 1 > to_ambigious`
+
+`cat to_ambigious | while read line ; do sed '/'$line'/,+1 d' -i ragtag.scaffold.fasta ; done`
+
+Required perl script = fastaNamesSizes.pl
 
 <br/><br/>
 **[5] Assessing assembly quality.** 
