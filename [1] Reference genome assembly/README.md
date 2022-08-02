@@ -1,6 +1,7 @@
 ## Generating a reference Themeda triandra genome
 
 As part of this project we generated a *Themeda triandra* reference genome assemble for the TtPh16-4 accession collected from the Carranglan region of the Philippines (15°56'35.8“ N  121°00'26.2“ E). A PacBio library was prepared by The University of Sheffield Molecular Ecology Laboratory, and sequenced on two PacBio Sequel SMRT cells generating approximately 20.93 Gb of PacBio subread data (N50 = 5.61 kb).
+
 <br/><br/>
 [1] The initial assembly was generated using Canu v.2.0 (Koren et al., 2017) with default parameters
 
@@ -19,6 +20,10 @@ Required Control file = config.txt
 
 Required Seed alingment = Seed1.fasta 
 
+<br/><br/>
+[2] Mitochondrial Genome assembly was preformed manually in Geneious v.5.3.6 (Kearse et al., 2012) after identifying contigs using blastn 
+
+
 
 
 
@@ -29,5 +34,7 @@ Required Seed alingment = Seed1.fasta
 **References**
 
 Dierckxsens, N., Mardulyn, P., & Smits, G. (2017). NOVOPlasty: de novo assembly of organelle genomes from whole genome data. Nucleic acids research, 45, e18-e18.
+
+Kearse, M., Moir, R., Wilson, A., Stones-Havas, S., Cheung, M., Sturrock, S., ... & Drummond, A. (2012). Geneious Basic: an integrated and extendable desktop software platform for the organization and analysis of sequence data. Bioinformatics, 28, 1647-1649.
 
 Koren, S., Walenz, B. P., Berlin, K., Miller, J. R., Bergman, N. H., & Phillippy, A. M. (2017). Canu: scalable and accurate long-read assembly via adaptive k-mer weighting and repeat separation. Genome research, 27(5), 722-736.
