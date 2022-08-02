@@ -58,6 +58,10 @@ Contigs containing organellar DNA were first identified using Blastn, with a  mi
 
 `cat org_contam | while read line ; do sed '/'$line'/,+1 d' -i Scaffolds_no_mask.fasta ; done`
 
+`RepeatMasker -nolow -norna -no_is -lib organelle.fa Scaffolds_to_mask.fasta`
+
+`cat Scaffolds_no_mask.fasta Scaffolds_to_mask.fasta.masked > Themeda_triandra_TTPH-organelle-masked.fasta`
+
 
 
 <br/><br/>
