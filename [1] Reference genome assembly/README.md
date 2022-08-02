@@ -68,6 +68,10 @@ Contigs containing organellar DNA were first identified using Blastn, with a  mi
 **[4] Homology based scaffolding.** 
 The organelle masked contigs were then scaffolded in relation to the genome of Sorghum bicolor (GenBank accession: GCA_000003195.3), a closely related grass from the same tribe (Andropogoneae), using RagTag v.2.1.0 (Alonge et al., 2021).
 
+`ragtag_scaffold.py -o OUTDIR -u chr_Sorghum.fasta Themeda_triandra_TTPH-organelle-masked.fasta`
+
+Example submission script = ragtag.sh
+
 
 <br/><br/>
 
