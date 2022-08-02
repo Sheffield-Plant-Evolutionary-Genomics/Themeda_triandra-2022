@@ -3,14 +3,16 @@
 As part of this project we generated a *Themeda triandra* reference genome assemble for the TtPh16-4 accession collected from the Carranglan region of the Philippines (15°56'35.8“ N  121°00'26.2“ E). A PacBio library was prepared by The University of Sheffield Molecular Ecology Laboratory, and sequenced on two PacBio Sequel SMRT cells generating approximately 20.93 Gb of PacBio subread data (N50 = 5.61 kb).
 
 <br/><br/>
-[1] The initial assembly was generated using Canu v.2.0 (Koren et al., 2017) with default parameters
+**[1] Assembling the nculear genome**
+The initial assembly was generated using Canu v.2.0 (Koren et al., 2017) with default parameters
 
 `canu  -p TTPH -d TTPHC useGrid=false maxThreads=16 maxMemory=252 genomeSize=0.85g -pacbio TTPH_pacbio_raw.fasta`
 
 Example submission script = canu_TTPH.sh
 
 <br/><br/>
-[2] Plastid Genome assembly was preformed using NOVOPlasty v.4.2.1 (Dierckxsens et al., 2017) with default parmeters and a matK seed alignment. 
+**[2] Assembling the plastid genome**
+Plastid Genome assembly was preformed using NOVOPlasty v.4.2.1 (Dierckxsens et al., 2017) with default parmeters and a matK seed alignment. 
 
 `perl NOVOPlasty4.3.1.pl -c config.txt`
 
@@ -21,7 +23,8 @@ Required Control file = config.txt
 Required Seed alingment = Seed1.fasta 
 
 <br/><br/>
-[3] The mitochondrial genome was manually assembled from the PacBio contigs in Geneious v.5.3.6 (Kearse et al., 2012). In brief, the complete set of mitochondrial genes was extracted from a Sorghum bicolor mitochondrial assembly (NC_008360.1) and used as a Blastn v.2.8.1 query to identify the top-hit TtPh16-4 contig for each gene. These contigs were then truncated to the matching regions, retaining the intergenic regions if multiple loci were present on a single contig. Finally, duplicated regions were removed and the remaining contigs concatenated into a single pseudomolecule with gaps represented by 100 Ns. The completeness of the TtPh16-4 mitochondrial genome was estimated using the MITOFY v.1.3.1 webserver (Alverson et al., 2010).
+**[3] Assembling the mitochondrial genome**
+The mitochondrial genome was manually assembled from the PacBio contigs in Geneious v.5.3.6 (Kearse et al., 2012). In brief, the complete set of mitochondrial genes was extracted from a Sorghum bicolor mitochondrial assembly (NC_008360.1) and used as a Blastn v.2.8.1 query to identify the top-hit TtPh16-4 contig for each gene. These contigs were then truncated to the matching regions, retaining the intergenic regions if multiple loci were present on a single contig. Finally, duplicated regions were removed and the remaining contigs concatenated into a single pseudomolecule with gaps represented by 100 Ns. The completeness of the TtPh16-4 mitochondrial genome was estimated using the MITOFY v.1.3.1 webserver (Alverson et al., 2010).
 
 `makeblastdb -in Canu_assembly.fasta -dbtype nucl`
 
@@ -33,6 +36,10 @@ Required Seed alingment = Seed1.fasta
 
 `awk '/^>/ {printf("\n%s\n",$0);next; } { printf("%s",$0);}  END {printf("\n");}' < Canu_assembly.fasta > Canu_assembly_unwrapped.fasta`
 
+<br/><br/>
+
+**[4] Masking organelle sequences in the reference genome.** 
+Contigs containing organellar DNA were first identified using Blastn, with a  minimum alignment length of 1,000 bp and sequence similarity ≥ 99%. These scaffolds were then masked using RepeatMasker v.4.0.6 (Smit et al., 2013) with the organelle sequences as a custom database
 
 <br/><br/>
 
