@@ -31,7 +31,7 @@ Required Seed alingment = Seed1.fasta
 
 *The above command requires the Canu_assembly.fasta file to be unwrapped. If this is not the case the file can be unwrapped with the following line:
 
-'awk '/^>/ {printf("\n%s\n",$0);next; } { printf("%s",$0);}  END {printf("\n");}' < Canu_assembly.fasta > Canu_assembly_unwrapped.fasta`
+`awk '/^>/ {printf("\n%s\n",$0);next; } { printf("%s",$0);}  END {printf("\n");}' < Canu_assembly.fasta > Canu_assembly_unwrapped.fasta`
 
 
 <br/><br/>
