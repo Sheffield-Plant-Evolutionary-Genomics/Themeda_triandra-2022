@@ -1,9 +1,7 @@
 ## Generating a reference Themeda triandra genome
 
 As part of this project we generated a *Themeda triandra* reference genome assemble for the TtPh16-4 accession collected from the Carranglan region of the Philippines (15°56'35.8“ N  121°00'26.2“ E). A PacBio library was prepared by The University of Sheffield Molecular Ecology Laboratory, and sequenced on two PacBio Sequel SMRT cells generating approximately 20.93 Gb of PacBio subread data (N50 = 5.61 kb).
-
 <br/><br/>
-
 [1] The initial assembly was generated using Canu v.2.0 (Koren et al., 2017) with default parameters
 
 `canu  -p TTPH -d TTPHC useGrid=false maxThreads=16 maxMemory=252 genomeSize=0.85g -pacbio TTPH_pacbio_raw.fasta`
