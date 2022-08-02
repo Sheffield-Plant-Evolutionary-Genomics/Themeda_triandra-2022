@@ -84,7 +84,7 @@ We removed scaffolds that were either very short or had a majority of their codi
 
 `cat to_ambigious | while read line ; do sed '/'$line'/,+1 d' -i ragtag.scaffold.fasta ; done`
 
-Required perl script = fastaNamesSizes.pl
+Required perl script = fastaNamesSizes.pl (by Lionel Guy [lionel.guy@ebc.uu.se])
 
 <br/><br/>
 **[5] Assessing assembly quality.** 
