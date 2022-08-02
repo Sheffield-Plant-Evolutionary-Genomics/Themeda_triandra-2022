@@ -8,7 +8,7 @@ As part of this project we generated a *Themeda triandra* reference genome assem
 
 Example submission script = canu_TTPH.sh
 
-
+<br/><br/>
 [2] Plastid Genome assembly was preformed using NOVOPlasty v.4.2.1 (Dierckxsens et al., 2017) with default parmeters and a matK seed alignment. 
 
 `perl NOVOPlasty4.3.1.pl -c config.txt`
