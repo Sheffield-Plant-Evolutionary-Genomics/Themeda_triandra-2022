@@ -28,7 +28,10 @@ Required Seed alingment = Seed1.fasta
 `blastn -db Canu_assembly.fasta -query Gene_Features_NC_008360.1.fa -outfmt 6 > Mt_Blast_raw`
 
 `cat Mt_Blast_raw | awk '!seen[$1]++' | cut -f 2 | sort | uniq | while read line ; do grep "$line" -A 1 Canu_assembly.fasta >>  mtScaffolds.fa ; done`
-*The above command assumes the fasta file is unwrapped
+
+*The above command requires the Canu_assembly.fasta file to be unwrapped. If this is not the case the file can be unwrapped with the following line:
+
+'awk '/^>/ {printf("\n%s\n",$0);next; } { printf("%s",$0);}  END {printf("\n");}' < Canu_assembly.fasta > Canu_assembly_unwrapped.fasta`
 
 
 <br/><br/>
