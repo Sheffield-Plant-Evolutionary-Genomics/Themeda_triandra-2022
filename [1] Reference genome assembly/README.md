@@ -33,7 +33,7 @@ The mitochondrial genome was manually assembled from the PacBio contigs in Genei
 
 `cat Mt_Blast_raw | awk '!seen[$1]++' | cut -f 2 | sort | uniq | while read line ; do grep "$line" -A 1 Canu_assembly.fasta >>  mtScaffolds.fa ; done`
 
-*The above command requires the Canu_assembly.fasta file to be unwrapped. If this is not the case the file can be unwrapped with the following line:
+*The above command [and all downstream commands] requires the Canu_assembly.fasta file to be unwrapped. If this is not the case the file can be unwrapped with the following line:
 
 `awk '/^>/ {printf("\n%s\n",$0);next; } { printf("%s",$0);}  END {printf("\n");}' < Canu_assembly.fasta > Canu_assembly_unwrapped.fasta`
 
@@ -43,6 +43,22 @@ Then proceed to manual assembly in Geneious and MITOFY to estimate assembly comp
 **[4] Masking organelle sequences in the reference genome.** 
 
 Contigs containing organellar DNA were first identified using Blastn, with a  minimum alignment length of 1,000 bp and sequence similarity ≥ 99%. These scaffolds were then masked using RepeatMasker v.4.0.6 (Smit et al., 2013) with the organelle sequences as a custom database
+
+`cat CpGenome.fa mtGenome.fa > organelle.fa`
+
+`makeblastdb -in organelle.fa -dbtype nucl`
+
+`blastn -db organelle.fa -query Canu_assembly.fasta -outfmt 6 > Blast_raw`
+
+`cat Blast_raw | awk '$4 >=1000' | awk '$3 >=99' | cut -f 1 | sort | uniq > org_contam`
+
+`cat org_contam | while read line ; do grep "$line" -A 1 Canu_assembly.fasta >> Scaffolds_to_mask.fasta ; done`
+
+`cp Canu_assembly.fasta Scaffolds_no_mask.fasta`
+
+`cat org_contam | while read line ; do sed '/'$line'/,+1 d' -i Scaffolds_no_mask.fasta ; done`
+
+
 
 <br/><br/>
 
