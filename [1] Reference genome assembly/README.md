@@ -14,9 +14,9 @@ Example submission script = canu_TTPH.sh
 
 Example submission script = cpGENOME.sh
 
-        Required Control file = config.txt
+Required Control file = config.txt
 
-        Required Seed alingment = Seed1.fasta 
+Required Seed alingment = Seed1.fasta 
 
 
 
