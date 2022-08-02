@@ -21,7 +21,7 @@ Required Control file = config.txt
 Required Seed alingment = Seed1.fasta 
 
 <br/><br/>
-[2] The mitochondrial genome was manually assembled from the PacBio contigs in Geneious v.5.3.6 (Kearse et al., 2012). In brief, the complete set of mitochondrial genes was extracted from a Sorghum bicolor mitochondrial assembly (NC_008360.1) and used as a Blastn v.2.8.1 query to identify the top-hit TtPh16-4 contig for each gene. These contigs were then truncated to the matching regions, retaining the intergenic regions if multiple loci were present on a single contig. Finally, duplicated regions were removed and the remaining contigs concatenated into a single pseudomolecule with gaps represented by 100 Ns. The completeness of the TtPh16-4 mitochondrial genome was estimated using the MITOFY v.1.3.1 webserver (Alverson et al., 2010).
+[3] The mitochondrial genome was manually assembled from the PacBio contigs in Geneious v.5.3.6 (Kearse et al., 2012). In brief, the complete set of mitochondrial genes was extracted from a Sorghum bicolor mitochondrial assembly (NC_008360.1) and used as a Blastn v.2.8.1 query to identify the top-hit TtPh16-4 contig for each gene. These contigs were then truncated to the matching regions, retaining the intergenic regions if multiple loci were present on a single contig. Finally, duplicated regions were removed and the remaining contigs concatenated into a single pseudomolecule with gaps represented by 100 Ns. The completeness of the TtPh16-4 mitochondrial genome was estimated using the MITOFY v.1.3.1 webserver (Alverson et al., 2010).
 
 `makeblastdb -in Canu_assembly.fasta -dbtype nucl`
 
