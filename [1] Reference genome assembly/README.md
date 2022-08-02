@@ -37,6 +37,7 @@ The mitochondrial genome was manually assembled from the PacBio contigs in Genei
 
 `awk '/^>/ {printf("\n%s\n",$0);next; } { printf("%s",$0);}  END {printf("\n");}' < Canu_assembly.fasta > Canu_assembly_unwrapped.fasta`
 
+Then proceed to manual assembly in Geneious and MITOFY to estimate assembly ompleteness  
 <br/><br/>
 
 **[4] Masking organelle sequences in the reference genome.** 
