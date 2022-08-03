@@ -19,7 +19,6 @@ The plastid genomes were manually rearranged so that the short single copy and i
 'perl Fasta2Phylip.pl in.fasta out.phy`
 
 Required perl script = Fasta2Phylip.pl (by Wenjie Deng)
-
 <br/><br/>
 **[2.4] Inferring maximum likelihood phylogenies**
 
