@@ -17,7 +17,7 @@ Prior to mapping the Themeda sequencing data, the data was cleaned using Trimmom
 
 Example submission script = Clean_themeda.sh
 
-Required adaptor file = ruSeq3-PE-2coo.fa
+Required adaptor file = TruSeq3-PE-2coo.fa
 
 
 **References**
