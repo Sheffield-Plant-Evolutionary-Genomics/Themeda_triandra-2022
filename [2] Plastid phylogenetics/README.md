@@ -1,5 +1,6 @@
 
 ## Inferring the phylogenetic history of Themeda using whole chloroplast genomes
+<br/><br/>
 
 **[2.1] Assembling whole plastid genomes from short read Illumina data**
 
@@ -13,7 +14,15 @@ The plastid genomes were manually rearranged so that the short single copy and i
 `mafft --auto in > out`
 <br/><br/>
 
-**[2.3] Inferring maximum likelihood phylogenies**
+**[2.3] Converting alignment from fasta to phy**
+
+'perl Fasta2Phylip.pl in.fasta out.phy`
+
+Required perl script = Fasta2Phylip.pl (by Wenjie Deng)
+
+<br/><br/>
+
+**[2.4] Inferring maximum likelihood phylogenies**
 
 Maximum-likelihood phylogenetic trees with 100 bootstrap replicates were inferred using PhyML v.20120412 (Guindon et al., 2010), with the best-fit nucleotide substitution model selected with SMS v.1.8.1 (Lefort et al., 2017) for alingemnts with and without the inverted repear (IR) removed
 
