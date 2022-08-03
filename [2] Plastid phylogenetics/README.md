@@ -16,7 +16,7 @@ The plastid genomes were manually rearranged so that the short single copy and i
 
 **[2.3] Converting alignment from fasta to phy**
 
-'perl Fasta2Phylip.pl in.fasta out.phy`
+`perl Fasta2Phylip.pl in.fasta out.phy`
 
 Required perl script = Fasta2Phylip.pl (by Wenjie Deng)
 <br/><br/>
