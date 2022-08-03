@@ -7,7 +7,7 @@ We used a reference-based approach to generate consensus sequences for the mitoc
 **[3.1] Cleaning nuclear data**
 Prior to mapping the Themeda sequencing data, the data was cleaned using Trimmomatic v.0.38 (Bolger et al., 2014) to remove adaptor contamination, low quality bases (4 bp sliding window with mean Phred score < 20) and short reads (< 50 bp). NGSQC Toolkit v. 2.3.3 (Patel & Jain, 2012) was then used to discard reads where 80% of the sequence had a Phred score < 20 or the read contained an ambiguous base. Finally, PRINSEQ v.0.20.3 (Schmieder & Edwards, 2011) was used to remove duplicated reads. 
 
-`trimmomatic PE -threads 6 R1.fastq.gz R2.fastq.gz -baseout OUT.fastq_trimmomatic ILLUMINACLIP:TruSeq3-PE-2coo.fa:2:30:10:8:TRUE SLIDINGWINDOW:4:20 MINLEN:50`
+`trimmomatic PE -threads 6 R1.fastq.gz R2.fastq.gz -baseout OUT.fastq_trimmomatic ILLUMINACLIP:TruSeq3-PE-2.fa:2:30:10:8:TRUE SLIDINGWINDOW:4:20 MINLEN:50`
 
 `perl IlluQC_PRLL.pl -pe OUT.fastq_trimmomatic_1P OUT..fastq_trimmomatic_2P 2 A -l 80 -s 20 -c 6 `
 
@@ -17,7 +17,7 @@ Prior to mapping the Themeda sequencing data, the data was cleaned using Trimmom
 
 Example submission script = Clean_themeda.sh
 
-Required adaptor file = TruSeq3-PE-2coo.fa
+Required adaptor file = TruSeq3-PE-2.fa
 
 
 **References**
