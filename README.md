@@ -8,3 +8,5 @@ Sections include:
 **[1] Reference genome assembly**
 
 **[2] Plastid phylogenetics**
+
+**[3] Mitochondrial phylogenetics**
