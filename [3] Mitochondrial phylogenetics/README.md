@@ -15,6 +15,9 @@ Prior to mapping the Themeda sequencing data, the data was cleaned using Trimmom
 
 `prinseq-lite.pl -fastq OUT.fastq_trimmomatic_1P_filtered_trimmed -fastq2 OUT.fastq_trimmomatic_1P_filtered_trimmed -derep 1 -out_good OUT_prinseq -no_qual_header`
 
+Example submission script = Clean_themeda.sh
+
+Required adaptor file = ruSeq3-PE-2coo.fa
 
 
 **References**
