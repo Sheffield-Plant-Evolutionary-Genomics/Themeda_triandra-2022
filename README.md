@@ -10,3 +10,13 @@ Sections include:
 **[2] Plastid phylogenetics**
 
 **[3] Mitochondrial phylogenetics**
+
+**[4] rDNA phylogenetics**
+
+**[5] Nucelar genes phylogenetics**
+
+**[7] popualtion genomics**
+
+**[6] Estimating ploidy**
+
+**[6] testing for selection**
