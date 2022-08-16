@@ -15,8 +15,8 @@ Sections include:
 
 **[5] Nucelar genes phylogenetics**
 
-**[7] popualtion genomics**
+**[6] popualtion genomics**
 
-**[6] Estimating ploidy**
+**[7] Estimating ploidy**
 
-**[6] testing for selection**
+**[8] testing for selection**
