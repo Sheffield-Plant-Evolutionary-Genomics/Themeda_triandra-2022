@@ -7,5 +7,5 @@ A reference-based approach was used to generate consensus sequences for single-c
 
 A custom shell script is used to process the output of the BUSCO program from the BUSCO sumamry and predicted genes files to identify complete BUSCOs, extract annotations, detemine their orientiation and calulate their length.
 
-Shell script = BUSCO_markers.sh
+Shell script = `BUSCO_markers.sh`
 
