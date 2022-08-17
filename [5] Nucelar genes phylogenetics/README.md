@@ -67,7 +67,11 @@ the chronopl.trees were then concatenated into a single file `cat *chronopl.tree
 
 A coalescence species tree was generated from the individual gene trees using ASTRAL v.5.7.5 (Zhang et al., 2018) after collapsing branches with < 10% bootstrap support using Newick utilities v.1.6 (Junier & Zdobnov, 2010). Phyparts v.0.0.1 (Smith et al., 2015) was used to evaluate individual gene tree support for the coalescence species tree. The results were visualised using the phypartspiecharts.py python script written by M. Johnson (available from: https://github.com/mossmatters/phyloscripts/blob/master/phypartspiecharts).
 
+collapsing branches with < 10% bootstrap support
+
 `newick_utils-master/src/./nw_ed  concatenated_BUSCO_gene_trees.txt 'i & b<=10' o > BUSCO-BS10.tree`
+
+Generating astral tree
 
 `java -jar astral.5.7.5.jar -i BUSCO-BS10.tree -o astral.BUSCO-BS10.tree 2> astral.log`
 
@@ -75,6 +79,15 @@ A coalescence species tree was generated from the individual gene trees using AS
 
 `java -jar astral.5.7.5.jar -q o astral.BUSCO-BS10.tree -i BUSCO-BS10.tree -t 2 -o astral.scored-t2.BUSCO-BS10.tree 2> astral.t2.log`
 
+Evaluating support for astral. The astral.BUSCO-BS10.tree was manually rooted before the next step, and the rooted gene trees from **[5.6] Generating a desnsitree** were used, all placein a directory called `THEM_ROOTED_GENE_TREES`. The `-s` paramater was used with various thresholds. 
+
+java -jar phyparts-0.0.1-SNAPSHOT-jar-with-dependencies.jar -d THEM_ROOTED_GENE_TREES -m rooted_astral.tree -a 1 -v -o Them_phyparts10 -s 10`
+
+the results were then visalised using the phypartspiecharts.py python script
+
+`conda activate ete3`
+
+`python phyparts-0.0.1-SNAPSHOT-jar-with-dependencies.jar rooted_astral Them_phyparts10 1288`
  
 <br/><br/>
 **References**
