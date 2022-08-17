@@ -23,6 +23,8 @@ required alignment file = `rpoC2_26554.phy`
 
 required tree file = `Tree.Nwk`
 
+A Likelihood ratio tests was used to compare models (df = 2) 
+
 <br/><br/>
 **[8.2] branch-site wise dn/ds**
 
@@ -36,7 +38,7 @@ required alignment file = `rpoC2_26554.phy`
 
 required tree file = `CP-Branch1.Nwk`
 
-
+A Likelihood ratio tests was used to compare models (df = 1)
 
 <br/><br/>
 **References**
