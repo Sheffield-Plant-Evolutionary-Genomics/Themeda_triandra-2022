@@ -49,7 +49,7 @@ To support the population structure results, we specifically tested for introgre
 
 `Dsuite Dtrios in.vcf sample_ID-arguens`
 
-and exampled sample_ID file is provided `sample_ID-arguens`. In thiscase it is for the analysis investigating gene flow between Themeda triandra and Themeda quadrivalvis, using Thmeda arguens as the outgroup.
+and exampled sample_ID file is provided `sample_ID-arguens`. In this case it is for the analysis investigating gene flow between Themeda triandra and Themeda quadrivalvis, using Thmeda arguens as the outgroup.
 
 
 
