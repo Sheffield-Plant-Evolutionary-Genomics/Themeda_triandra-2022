@@ -61,7 +61,6 @@ The V1.Results rows are organised as NA, and 1x - 6x .. the colums are orderd by
 
 
 
-Shell script to process Hmmploidy results: `hmmploidy-process-results.sh`
 
 
 <br/><br/>
