@@ -8,9 +8,21 @@ A multi-sample mpileup file was generated for HMMploidy from the bowtie2 alignme
 
 `samtools mpileup --bam-list list.bams -q 20 -f TtPh16-4.fasta --max-depth 100 -o TtPh16-4`
 
-An example of extracting the data for one chromoms is shown below
+An example of extracting the data for one chromosome is shown below
 
 `grep "^1_RagTag\s" TtPh16-4 > 1_RagTag`
+
+
+<br/><br/>
+**[7.1] Generating a multi-sample mpileup file**
+
+HMMploidy was used to infer ploidy for each chromosome using the followign commands:
+
+`python HMMploidy-master/./Genotype_Likelihoods.py 1_RagTag`
+
+`Rscript HMMploidy-master/HMMploidy.R file=1_RagTag  maxPloidy=6  wind=100000  minInd=2`
+
+and example array script to run all 10 chromosomes is included `hmmploidy-array-100kb.sh`
 
 
 
