@@ -1,0 +1,31 @@
+Project:
+-----------------------
+Project name          = T101_Jobson_1611
+Type                  = chloro
+Genome Range          = 9000-20000
+K-mer                 = 33
+Max memory            = 16
+Extended log          = 0
+Save assembled reads  = no
+Seed Input            = ITS_BAIT.fasta
+Extend seed directly  = no
+Reference sequence    = 
+Variance detection    = no
+Heteroplasmy          = 
+HP exclude list       =
+Chloroplast sequence  = 
+
+Dataset 1:
+-----------------------
+Read Length           = 151
+Insert size           = 300
+Platform              = illumina
+Single/Paired         = PE
+Combined reads        =
+Forward reads         = READ1
+Reverse reads         = READ2
+
+Optional:
+-----------------------
+Insert size auto      = yes
+Use Quality Scores    = no
