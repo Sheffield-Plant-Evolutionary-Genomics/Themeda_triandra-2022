@@ -1,1 +1,6 @@
+**[2.1] Assembling rDNA array and inferring a ML tree**
+
+The methods are the same as those used for the chloroplast analysis, please see **[2] Plastid phylogenetics** for detailed methods. The only ammendments were in the NOVOPlasty control file `config.txt` which included a different seed alingment `ITS_BAIT.fasta`
+
+The alingments were also trimmed to the 5.80 kb rDNA coding region consisting of 18S, ITS1, 5.8S, ITS2, 26S using Geneious
 
