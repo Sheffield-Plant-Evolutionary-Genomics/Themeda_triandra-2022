@@ -39,11 +39,17 @@ Example array submission script = mapping_array.sh
 To do this we used previously published shell scripts (from Dunning et al. (2019); adapted from Olofsson JK et al. (2016)).   
 
 Shell script = ShortRead_to_alignment-mtGENOME.sh
+
 Required sample file = Themeda_sample_RAGTAG-MT
+
 required CDS.BED file = mt-CDS.BED
+
 required GENES.BED file = mt-gene.BED
+
 required python script = countBases2.py
+
 required python script = Remove_N_OnlySeqs.py
+
 required perl script = split_annotated_seq.pl
 
 
