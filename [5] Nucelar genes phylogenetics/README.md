@@ -50,12 +50,18 @@ A DensiTree v.2.2.7 (Bouckaert, 2010) plot was made for transformmed BUSCO genes
 library(ape)
 
 `tree1<-read.tree("GENE1.tree")`
+
 `tree2<-root(tree1,c("T102_Jobson_2028","T130_Jobson_2520"),resolve.root = TRUE)`
+
 `write.tree(tree2, file = "GENE1_rooted.tree")`
+
 `tree3<-chronopl(tree2, 1, age.min = 1, age.max = NULL,node = "root", S = 1, tol = 1e-8,CV = FALSE, eval.max = 500, iter.max = 500)`
+
 `write.tree(tree3, file = "GENE1_chronopl.tree")`
 
+the chronopl.trees were then concatenated into a single file `cat *chronopl.tree > BUSCO_chronopl.tree` before being process with DensiTree
 
+<br/><br/>
 
 **[5.7] Generating Coalescece spcies tree**
 
