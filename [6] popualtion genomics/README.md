@@ -18,6 +18,21 @@ ANGSD was used to infer a PCA from the genotype likelihoods.
 
 `pcangsd -beagle angsdput.beagle.gz -admix -o pcangsd.default`
 
+The PCA figure was generated in R using the following commands
+
+`PCA<-read.delim("pcangsd.default.cov",header=F)`
+`eig<-eigen(PCA)`
+`samp<-read.delim("sample_info",header=F)`
+`svg("PCA.svg")`
+`plot(eig$vectors[,1],eig$vectors[,2], col=as.vector(samp[,5]), pch=19, `
+    ` xlab=paste("PC1 (",round((eig$values[1]/sum(eig$values))*100),"%)", sep=""),`
+    ` ylab=paste("PC3 (",round((eig$values[2]/sum(eig$values))*100),"%)", sep=""))`
+`abline(v=0, lty=2, col="grey30")`
+`abline(h=0, lty=2, col="grey30")`
+`dev.off()`
+
+
+
 <br/><br/>
 **[6.3] Calculating admixture**
 
