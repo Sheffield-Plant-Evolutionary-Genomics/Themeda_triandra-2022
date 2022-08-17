@@ -52,7 +52,9 @@ The percentage of 100 kb windows supporting each ploidy level was then calculate
 
 `paste count_x00* > V1.Results`
 
-`rm count_x00*`
+`rm count_x00* x* *HMMploidy.1`
+
+The V1.Results rows are organised as NA, and 1x - 6x .. the colums are orderd by sample as they were in the `list.bams` file. We provide the example file `1_RagTag.HMMploidy` and and example shell script to run this as an array `hmmploidy-process-results.sh` 
 
 
 
