@@ -46,8 +46,9 @@ Shell script = `sms_trees_array.sh`
 
 **[5.6] Generating a desnsitree**
 
-A DensiTree v.2.2.7 (Bouckaert, 2010) plot was made for transformmed BUSCO genes trees using the chronopl function (lambda = 1) as part of the ape v.5.2 (Paradis & Schliep, 2019) package in R v.3.4.3. Below is the R command used for each tree:
-library(ape)
+A DensiTree v.2.2.7 (Bouckaert, 2010) plot was made for transformmed BUSCO genes trees using the chronopl function (lambda = 1) as part of the ape v.5.2 (Paradis & Schliep, 2019) package in R v.3.4.3. Below are the R command used for each tree:
+
+`library(ape)`
 
 `tree1<-read.tree("GENE1.tree")`
 
