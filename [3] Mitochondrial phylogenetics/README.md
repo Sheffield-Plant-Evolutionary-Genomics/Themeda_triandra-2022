@@ -15,9 +15,9 @@ Prior to mapping the Themeda sequencing data, the data was cleaned using Trimmom
 
 `prinseq-lite.pl -fastq OUT.fastq_trimmomatic_1P_filtered_trimmed -fastq2 OUT.fastq_trimmomatic_1P_filtered_trimmed -derep 1 -out_good OUT_prinseq -no_qual_header`
 
-Example submission script = Clean_themeda.sh
+Example submission script = `Clean_themeda.sh`
 
-Required adaptor file = TruSeq3-PE-2.fa
+Required adaptor file = `TruSeq3-PE-2.fa`
 <br/><br/>
 
 **[3.2] Mapping data to the reference genome**
@@ -32,26 +32,26 @@ Then map the data and generate sorted bam file
 
 `samtools sort SAMPLE_1.bam -o SAMPLE_1_SORTED.bam`
 
-Example array submission script = mapping_array.sh
+Example array submission script = `mapping_array.sh`
 
 <br/><br/>
 **[3.3] Generate a consensus sequence for the mtgenome**
 
 To do this we used previously published shell scripts (from Dunning et al. (2019); adapted from Olofsson JK et al. (2016)). this generates a fasta alingment for genes/regionsof interest.   
 
-Shell script = ShortRead_to_alignment-mtGENOME.sh
+Shell script = `ShortRead_to_alignment-mtGENOME.sh`
 
-Required sample file = Themeda_sample_RAGTAG-MT
+Required sample file = `Themeda_sample_RAGTAG-MT`
 
-required CDS.BED file = mt-CDS.BED
+required CDS.BED file = `mt-CDS.BED`
 
-required GENES.BED file = mt-gene.BED
+required GENES.BED file = `mt-gene.BED`
 
-required python script = countBases2.py
+required python script = `countBases2.py`
 
-required python script = Remove_N_OnlySeqs.py
+required python script = `Remove_N_OnlySeqs.py`
 
-required perl script = split_annotated_seq.pl
+required perl script = `split_annotated_seq.pl`
 
 <br/><br/>
 **[3.4] Clean the mtGenome alingnment**
