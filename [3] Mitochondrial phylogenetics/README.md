@@ -19,9 +19,25 @@ Example submission script = Clean_themeda.sh
 
 Required adaptor file = TruSeq3-PE-2.fa
 
+<br/><br/>
+**[3.1] Mapping data to the reference genome**
+
+Bowtie2 v.2.3.4.3 (Langmead & Salzberg, 2012) was used to map the cleaned nucelar data to the TtPh16-4 reference genome. First this involve building a Bowtie database
+
+`bowtie2-build TtPh16-4.fasta TtPh16-4.fasta`
+
+Then map the data and generate sorted bam file
+
+`bowtie2 -x TtPh16-4.fasta -1 SAMPLE_1_R1.fastq.gz -2 SAMPLE_1_R2.fastq.gz --no-unal -p 2 | samtools view -bS - > SAMPLE_1.bam`
+
+`samtools sort SAMPLE_1.bam -o SAMPLE_1_SORTED.bam`
+
+
 
 **References**
 Bolger, A. M., Lohse, M., & Usadel, B. (2014). Trimmomatic: a flexible trimmer for Illumina sequence data. Bioinformatics, 30, 2114-2120.
+
+Langmead, B., & Salzberg, S. L. (2012). Fast gapped-read alignment with Bowtie 2. Nature Methods, 9, 357-359.
 
 Patel, R. K., & Jain, M. (2012). NGS QC Toolkit: a toolkit for quality control of next generation sequencing data. PloS one, 7, e30619.
 
