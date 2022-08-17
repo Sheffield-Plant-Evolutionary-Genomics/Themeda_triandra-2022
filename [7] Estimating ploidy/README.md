@@ -1,7 +1,7 @@
 ## Estiamting  ploidal level from low coverage resequencing data
 <br/><br/>
 The ploidy of each sample was estimated using HMMploidy (Soraggi et al., 2021), a method which has been developed to infer ploidy from low-depth sequencing data.
-
+<br/><br/>
 **[7.1] Generating a multi-sample mpileup file**
 
 A multi-sample mpileup file was generated for HMMploidy from the bowtie2 alignments with SAMtools v.1.9 (Li et al., 2009), only including reads with a minimum read mapping quality (mapQ) of 20, counting anomalous read pairs and setting a maximum per-file depth of 100. This was then split into individual files for each chromosome. 
