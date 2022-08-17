@@ -81,7 +81,7 @@ Generating astral tree
 
 Evaluating support for astral. The astral.BUSCO-BS10.tree was manually rooted before the next step, and the rooted gene trees from **[5.6] Generating a desnsitree** were used, all placein a directory called `THEM_ROOTED_GENE_TREES`. The `-s` paramater was used with various thresholds. 
 
-java -jar phyparts-0.0.1-SNAPSHOT-jar-with-dependencies.jar -d THEM_ROOTED_GENE_TREES -m rooted_astral.tree -a 1 -v -o Them_phyparts10 -s 10`
+`java -jar phyparts-0.0.1-SNAPSHOT-jar-with-dependencies.jar -d THEM_ROOTED_GENE_TREES -m rooted_astral.tree -a 1 -v -o Them_phyparts10 -s 10`
 
 the results were then visalised using the phypartspiecharts.py python script
 
