@@ -56,8 +56,26 @@ The percentage of 100 kb windows supporting each ploidy level was then calculate
 
 The V1.Results rows are organised as NA, and 1x - 6x .. the colums are orderd by sample as they were in the `list.bams` file. We provide the example file `1_RagTag.HMMploidy` and and example shell script to run this as an array `hmmploidy-process-results.sh` 
 
+<br/><br/>
+**[7.3] Plotting genome proportion**
 
+The proportion of windows assigned to 2x-6x is plotted in R. From the `V1.Results file` generated above a `genome_proportion` file is generated (example provide), with colum values being 100 - the cumulative proportion assinged to that ploidal level and lower (for ease of plotting). A simple barplot is then generated in R:
 
+`data<-read.table("genome_proportion",header=T)`
+
+`svg("my_plot.svg")`
+
+`barplot(data$n6, col="yellow")`
+
+`barplot(data$n5, col="orange", add=T)`
+
+`barplot(data$n4, col="red", add=T)`
+
+`barplot(data$n3, col="blue", add=T)`
+
+`barplot(data$n2, col="green", add=T)`
+
+`dev.off()`
 
 
 
