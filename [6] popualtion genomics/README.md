@@ -20,7 +20,7 @@ ANGSD was used to infer a PCA from the genotype likelihoods.
 
 <br/><br/>
 
-The PCA figure was generated in R using the commands below. Example files included are `pcangsd.default.cov` and `sample_info`
+A PCA figure was generated in R using the commands below. Example files included are `pcangsd.default.cov` and `sample_info`
 
 `PCA<-read.delim("pcangsd.default.cov",header=F)`
 
@@ -46,6 +46,22 @@ The PCA figure was generated in R using the commands below. Example files includ
 The number of genetic clusters (K) in the genotype likelihoods was examined using NGSadmix (Skotte et al., 2013), with default parameters and 10 replicates for K between 1 and 10. The optimal K was determined using the ΔK method (Evanno et al., 2005) implemented using the CLUMPAK webserver (Kopelman et al., 2015).
 
 `NGSadmix -likes angsdput.beagle.gz -K 1  -outfiles replicate-runs/K1_1`
+
+<br/><br/>
+
+An admixture figure was generated in R using the commands below. Example files included are `STRUCT-IN` 
+
+`svg("admix.svg")`
+
+`structure<-read.delim("STRUCT-IN",header=F)`
+
+`barplot(structure[,6], col="green")`
+
+`barplot(structure[,7], col="yellow", add=T)`
+
+`dev.off()`
+
+
 
 <br/><br/>
 **[6.3] Calculating Fst**
