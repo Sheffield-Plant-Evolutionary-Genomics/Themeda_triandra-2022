@@ -3,7 +3,7 @@
 This details conducting various population genomics, including generating PCA's from SNP data, admixture analyses, calulating Fst and the D-Statistic / f4-ratio.
 <br/><br/>
 
-**[1] Calculating genotype likelihoods**
+**[6.1] Calculating genotype likelihoods**
 
 Genotype likelihoods were estimated across the entire TtPh16-4 nuclear genome using ANGSD v.0.929-13-gb5c4df3 (Korneliussen et al., 2014) and the bowtie2 alignments generated in step **[3.2] Mapping data to the reference genome** above with organelle sequences excluded.
 
@@ -12,13 +12,46 @@ Genotype likelihoods were estimated across the entire TtPh16-4 nuclear genome us
 `angsd  -b list.bams -ref TtPh16-4.fasta  -uniqueOnly 1 -nThreads 4 -remove_bads 1 -trim 0 -C 50 -baq 1 -minMapQ 20 -minQ 20 -minInd 2 -docounts 1 -gl 1 -domajorminor 1 -domaf 1 -doglf 2 -dobcf 1 -dopost 1 -SNP_pval 1e-6 -dogeno 5 --ignore-RG 0`
 
 <br/><br/>
-**[1] Calculating PCA**
+**[6.2] Calculating PCA**
 
-ANGSD was used to infer a PCA from the SNP data
+ANGSD was used to infer a PCA from the genotype likelihoods. 
 
 `pcangsd -beagle angsdput.beagle.gz -admix -o pcangsd.default`
+
+<br/><br/>
+**[6.3] Calculating admixture**
+
+The number of genetic clusters (K) in the genotype likelihoods was examined using NGSadmix (Skotte et al., 2013), with default parameters and 10 replicates for K between 1 and 10. The optimal K was determined using the ΔK method (Evanno et al., 2005) implemented using the CLUMPAK webserver (Kopelman et al., 2015).
+
+`NGSadmix -likes angsdput.beagle.gz -K 1  -outfiles replicate-runs/K1_1`
+
+<br/><br/>
+**[6.3] Calculating fst**
+
+Pairwise FST was estimated using ANGSD among Australian populations both globally and using a sliding window method (window = 50kb, slide = 10kb), with this analysis restricted to individuals that had 99% of the genome assigned to a single genetic cluster (based on results from the **[7] Estimating ploidy** analysis
+
+`angsd -b POP1.bam -anc TtPh16-4.fasta -out pop1 -dosaf 1 -gl 1`
+`angsd -b POP2.bam -anc TtPh16-4.fasta -out green -dosaf 1 -gl 1`
+
+`realSFS POP1.saf.idx POP2.saf.idx -P 16 >  OUT.ml`
+
+`realSFS fst index blue.saf.idx green.saf.idx -sfs OUT.ml -fstout OUT2 -P 16`
+
+`realSFS fst stats OUT2.fst.idx  -P 16 > fst.res`
+
+`realSFS fst stats2 OUT2.fst.idx -win 50000 -step 10000 -P 16 > fst.res.slidingwindow`
+
+
+
+
 <br/><br/>
 
 **References**
 
+Evanno, G., Regnaut, S., & Goudet, J. (2005). Detecting the number of clusters of individuals using the software STRUCTURE: a simulation study. Molecular Ecology, 14, 2611-2620.
+
+Kopelman, N. M., Mayzel, J., Jakobsson, M., Rosenberg, N. A., & Mayrose, I. (2015). Clumpak: a program for identifying clustering modes and packaging population structure inferences across K. Molecular Ecology Resources, 15, 1179-1191.
+
 Korneliussen, T. S., Albrechtsen, A., & Nielsen, R. (2014). ANGSD: analysis of next generation sequencing data. BMC Bioinformatics, 15, 1-13.
+
+Skotte, L., Korneliussen, T. S., & Albrechtsen, A. (2013). Estimating individual admixture proportions from next generation sequencing data. Genetics, 195, 693-702.
