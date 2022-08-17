@@ -19,3 +19,25 @@ Required sample file = `Themeda_sample_RAGTAG-MT`
 
 other required files see  **[3.3] Generate a consensus sequence for the mtgenome**
 
+<br/><br/>
+**[5.3] Clean BUSCO gene alingemnts**
+
+The alignments were cleaned using as in step **[3.4] Clean the mtGenome alingnment** 
+
+<br/><br/>
+**[5.4] Concatenated nuclear tree**
+
+The indivdual gene sequences were concatenated in Geneious v.5.3.6 (Kearse et al., 2012) and a ML tree was inferred with IQtree v.1.6.3 (Nguyen et al., 2015)
+
+'iqtree -s Concatenated_BUSCO.fasta -bb 1000 -nt 4'
+
+
+
+<br/><br/>
+
+**References**
+
+Kearse, M., Moir, R., Wilson, A., Stones-Havas, S., Cheung, M., Sturrock, S., ... & Drummond, A. (2012). Geneious Basic: an integrated and extendable desktop software platform for the organization and analysis of sequence data. Bioinformatics, 28, 1647-1649.
+
+Nguyen, L. T., Schmidt, H. A., Von Haeseler, A., & Minh, B. Q. (2015). IQ-TREE: a fast and effective stochastic algorithm for estimating maximum-likelihood phylogenies. Molecular Biology and Evolution, 32, 268-274.
+
