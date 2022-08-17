@@ -35,7 +35,11 @@ The indivdual gene sequences were concatenated in Geneious v.5.3.6 (Kearse et al
 
 `iqtree -s Concatenated_BUSCO.fasta -bb 1000 -nt 4`
 
+**[5.5] Indidual ML gene trees**
 
+This was done as in step **[2.3] Converting alignment from fasta to phy** and **[2.4] Inferring maximum likelihood phylogenies**. An example array submission script is included. 
+
+Shell script = `sms_trees_array.sh`
 
 <br/><br/>
 
