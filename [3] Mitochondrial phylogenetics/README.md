@@ -19,6 +19,7 @@ Example submission script = Clean_themeda.sh
 
 Required adaptor file = TruSeq3-PE-2.fa
 <br/><br/>
+
 **[3.1] Mapping data to the reference genome**
 
 Bowtie2 v.2.3.4.3 (Langmead & Salzberg, 2012) was used to map the cleaned nucelar data to the TtPh16-4 reference genome. First this involve building a Bowtie database
