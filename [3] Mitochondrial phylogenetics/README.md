@@ -18,7 +18,6 @@ Prior to mapping the Themeda sequencing data, the data was cleaned using Trimmom
 Example submission script = Clean_themeda.sh
 
 Required adaptor file = TruSeq3-PE-2.fa
-
 <br/><br/>
 **[3.1] Mapping data to the reference genome**
 
@@ -32,8 +31,9 @@ Then map the data and generate sorted bam file
 
 `samtools sort SAMPLE_1.bam -o SAMPLE_1_SORTED.bam`
 
+Example array submission script = mapping_array.sh
 
-
+<br/><br/>
 **References**
 Bolger, A. M., Lohse, M., & Usadel, B. (2014). Trimmomatic: a flexible trimmer for Illumina sequence data. Bioinformatics, 30, 2114-2120.
 
