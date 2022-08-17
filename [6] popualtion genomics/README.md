@@ -18,7 +18,9 @@ ANGSD was used to infer a PCA from the genotype likelihoods.
 
 `pcangsd -beagle angsdput.beagle.gz -admix -o pcangsd.default`
 
-The PCA figure was generated in R using the following commands
+<br/><br/>
+
+The PCA figure was generated in R using the commands below. Example files included are `pcangsd.default.cov` and `sample_info`
 
 `PCA<-read.delim("pcangsd.default.cov",header=F)`
 
