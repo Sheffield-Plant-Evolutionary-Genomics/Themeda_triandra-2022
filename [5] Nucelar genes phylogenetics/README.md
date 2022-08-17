@@ -35,6 +35,7 @@ The indivdual gene sequences were concatenated in Geneious v.5.3.6 (Kearse et al
 
 `iqtree -s Concatenated_BUSCO.fasta -bb 1000 -nt 4`
 
+<br/><br/>
 **[5.5] Indidual ML gene trees**
 
 This was done as in step **[2.3] Converting alignment from fasta to phy** and **[2.4] Inferring maximum likelihood phylogenies**. An example array submission script is included. 
@@ -43,9 +44,19 @@ Shell script = `sms_trees_array.sh`
 
 <br/><br/>
 
+**[5.5] Generating Coalescece spcies tree**
+
+A coalescence species tree was generated from the individual gene trees using ASTRAL v.5.7.5 (Zhang et al., 2018) after collapsing branches with < 10% bootstrap support using Newick utilities v.1.6 (Junier & Zdobnov, 2010). Phyparts v.0.0.1 (Smith et al., 2015) was used to evaluate individual gene tree support for the coalescence species tree. The results were visualised using the phypartspiecharts.py python script written by M. Johnson (available from: https://github.com/mossmatters/phyloscripts/blob/master/phypartspiecharts).
+ 
+
 **References**
+
+Junier, T., & Zdobnov, E. M. (2010). The Newick utilities: high-throughput phylogenetic tree processing in the UNIX shell. Bioinformatics, 26, 1669-1670.
 
 Kearse, M., Moir, R., Wilson, A., Stones-Havas, S., Cheung, M., Sturrock, S., ... & Drummond, A. (2012). Geneious Basic: an integrated and extendable desktop software platform for the organization and analysis of sequence data. Bioinformatics, 28, 1647-1649.
 
 Nguyen, L. T., Schmidt, H. A., Von Haeseler, A., & Minh, B. Q. (2015). IQ-TREE: a fast and effective stochastic algorithm for estimating maximum-likelihood phylogenies. Molecular Biology and Evolution, 32, 268-274.
 
+Smith, S. A., Moore, M. J., Brown, J. W., & Yang, Y. (2015). Analysis of phylogenomic datasets reveals conflict, concordance, and gene duplications with examples from animals and plants. BMC Evolutionary Biology, 15, 1-15.
+
+Zhang, C., Rabiee, M., Sayyari, E., & Mirarab, S. (2018). ASTRAL-III: polynomial time species tree reconstruction from partially resolved gene trees. BMC Bioinformatics, 19, 15-30.
