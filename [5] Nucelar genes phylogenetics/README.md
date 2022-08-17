@@ -29,7 +29,7 @@ The alignments were cleaned using as in step **[3.4] Clean the mtGenome alingnme
 
 The indivdual gene sequences were concatenated in Geneious v.5.3.6 (Kearse et al., 2012) and a ML tree was inferred with IQtree v.1.6.3 (Nguyen et al., 2015)
 
-'iqtree -s Concatenated_BUSCO.fasta -bb 1000 -nt 4'
+`iqtree -s Concatenated_BUSCO.fasta -bb 1000 -nt 4`
 
 
 
