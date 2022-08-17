@@ -66,6 +66,15 @@ the chronopl.trees were then concatenated into a single file `cat *chronopl.tree
 **[5.7] Generating Coalescece spcies tree**
 
 A coalescence species tree was generated from the individual gene trees using ASTRAL v.5.7.5 (Zhang et al., 2018) after collapsing branches with < 10% bootstrap support using Newick utilities v.1.6 (Junier & Zdobnov, 2010). Phyparts v.0.0.1 (Smith et al., 2015) was used to evaluate individual gene tree support for the coalescence species tree. The results were visualised using the phypartspiecharts.py python script written by M. Johnson (available from: https://github.com/mossmatters/phyloscripts/blob/master/phypartspiecharts).
+
+`newick_utils-master/src/./nw_ed  concatenated_BUSCO_gene_trees.txt 'i & b<=10' o > BUSCO-BS10.tree`
+
+`java -jar astral.5.7.5.jar -i BUSCO-BS10.tree -o astral.BUSCO-BS10.tree 2> astral.log`
+
+`java -jar astral.5.7.5.jar -q o astral.BUSCO-BS10.tree -i BUSCO-BS10.tree -t 1 -o astral.scored-t1.BUSCO-BS10.tree 2> astral.t1.log`
+
+`java -jar astral.5.7.5.jar -q o astral.BUSCO-BS10.tree -i BUSCO-BS10.tree -t 2 -o astral.scored-t2.BUSCO-BS10.tree 2> astral.t2.log`
+
  
 <br/><br/>
 **References**
