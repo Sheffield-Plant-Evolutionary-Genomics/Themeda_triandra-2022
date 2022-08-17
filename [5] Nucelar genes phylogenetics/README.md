@@ -63,14 +63,11 @@ A DensiTree v.2.2.7 (Bouckaert, 2010) plot was made for transformmed BUSCO genes
 the chronopl.trees were then concatenated into a single file `cat *chronopl.tree > BUSCO_chronopl.tree` before being process with DensiTree
 
 <br/><br/>
-
 **[5.7] Generating Coalescece spcies tree**
 
 A coalescence species tree was generated from the individual gene trees using ASTRAL v.5.7.5 (Zhang et al., 2018) after collapsing branches with < 10% bootstrap support using Newick utilities v.1.6 (Junier & Zdobnov, 2010). Phyparts v.0.0.1 (Smith et al., 2015) was used to evaluate individual gene tree support for the coalescence species tree. The results were visualised using the phypartspiecharts.py python script written by M. Johnson (available from: https://github.com/mossmatters/phyloscripts/blob/master/phypartspiecharts).
  
-
-
-
+<br/><br/>
 **References**
 
 Junier, T., & Zdobnov, E. M. (2010). The Newick utilities: high-throughput phylogenetic tree processing in the UNIX shell. Bioinformatics, 26, 1669-1670.
