@@ -30,7 +30,7 @@ The PCA figure was generated in R using the commands below. Example files includ
 
 `svg("PCA.svg")`
 
-`plot(eig$vectors[,1],eig$vectors[,2], col=as.vector(samp[,5]), pch=19, xlab=paste("PC1 (",round((eig$values[1]/sum(eig$values))*100),"%)", sep=""), ylab=paste("PC3 (",round((eig$values[2]/sum(eig$values))*100),"%)", sep=""))`
+`plot(eig$vectors[,1],eig$vectors[,2], col=as.vector(samp[,5]), pch=19, xlab=paste("PC1 (",round((eig$values[1]/sum(eig$values))*100),"%)", sep=""), ylab=paste("PC2 (",round((eig$values[2]/sum(eig$values))*100),"%)", sep=""))`
 
 `abline(v=0, lty=2, col="grey30")`
 
