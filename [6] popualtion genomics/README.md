@@ -89,6 +89,30 @@ To support the population structure results, we specifically tested for introgre
 
 and exampled sample_ID file is provided `sample_ID-arguens`. In this case it is for the analysis investigating gene flow between Themeda triandra and Themeda quadrivalvis, using Thmeda arguens as the outgroup.
 
+<br/><br/>
+
+BH p-value correction was perfomred in R, along with the figures. Example files included are `Asia_Quad.txt` 
+
+`svg("admix.svg")`
+
+`par(mfrow=c(2,1))`
+
+`D_BBAA_noGF <- read.table("Asia_Quad.txt",as.is=T,header=T)`
+
+`PVAL<-p.adjust(D_BBAA_noGF$p.value,method="BH")`
+
+`write.table(PVAL, file = "BH_D_BBAA_noGF.txt")`
+
+`plot(D_BBAA_noGF$Dstatistic, ylab="D",xlab="trio number",col=as.vector(D_BBAA_noGF[,11]), pch=19, ylim=c(0,0.15))`
+
+`points(D_BBAA_noGF$Dstatistic, col=as.vector(D_BBAA_noGF[,13]), pch=1, ylim=c(0,0.15))`
+
+`plot(D_BBAA_noGF$f4.ratio, ylab="f4-ratio",xlab="trio number",col=as.vector(D_BBAA_noGF[,11]), pch=19, ylim=c(0,0.15))`
+
+`points(D_BBAA_noGF$f4.ratio, col=as.vector(D_BBAA_noGF[,13]), pch=1, ylim=c(0,0.15))`
+
+`dev.off()`
+
 
 
 <br/><br/>
