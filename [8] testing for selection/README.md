@@ -1,15 +1,22 @@
 ## Estimating positive selection in chloroplast genes
 <br/><br/>
-**[1] Pairwise dn/ds**
+**[8.1] Pairwise dn/ds**
 
 Pairwise estimation of the ratio (ω) of synonymous (dS) and non-synonymous (dN) substitutions between sequences was calculated using the Yang and Nielson (2000) using 2 representative sequences.
 
-'yn00 yn00.ctl`
+`yn00 yn00.ctl`
 
 required control file = `yn00.ctl`
 
 required alignment file = `yn00.phy`
 
+<br/><br/>
+**[8.2] site wise dn/ds**
+
+
+
+<br/><br/>
+**[8.2] branch-site wise dn/ds**
 
 <br/><br/>
 **References**
