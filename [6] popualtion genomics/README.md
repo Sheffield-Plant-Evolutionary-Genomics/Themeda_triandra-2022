@@ -87,11 +87,11 @@ To support the population structure results, we specifically tested for introgre
 
 `Dsuite Dtrios in.vcf sample_ID-arguens`
 
-and exampled sample_ID file is provided `sample_ID-arguens`. In this case it is for the analysis investigating gene flow between Themeda triandra and Themeda quadrivalvis, using Thmeda arguens as the outgroup.
+An exampled sample_ID file is provided `sample_ID-arguens`. In this case it is for the analysis investigating gene flow between Themeda triandra and Themeda quadrivalvis, using Thmeda arguens as the outgroup.
 
 <br/><br/>
 
-BH p-value correction was perfomred in R, along with the figures. Example files included are `Asia_Quad.txt` 
+BH p-value correction was performed in R, along with generating the figures. Example files included are `Asia_Quad.txt` 
 
 `svg("admix.svg")`
 
