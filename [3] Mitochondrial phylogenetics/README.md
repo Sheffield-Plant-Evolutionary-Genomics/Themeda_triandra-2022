@@ -36,7 +36,7 @@ Example array submission script = mapping_array.sh
 
 <br/><br/>
 **[3.3] generate a consensus sequence for the mtgenome**
-To do this we used previously published shell scripts (from Dunning et al. (2019); adapted from Olofsson JK et al. (2016)).   
+To do this we used previously published shell scripts (from Dunning et al. (2019); adapted from Olofsson JK et al. (2016)). this generates a fasta alingment for genes/regionsof interest.   
 
 Shell script = ShortRead_to_alignment-mtGENOME.sh
 
@@ -52,10 +52,20 @@ required python script = Remove_N_OnlySeqs.py
 
 required perl script = split_annotated_seq.pl
 
+<br/><br/>
+**[3.4] Clean the mtGenome alingnment**
+Ambigious bases `N` are substituted for gaps `-` and then trimAl v.1.2rev59 (Capella-Gutiérrez et al., 2009) is used to clean the alingment. 
+
+`sed '/^>/ ! s/N/-/g' -i mtGENOME.fa` 
+
+`trimal -in mtGENOME.fa  -out mtGENOME-clean.fa  -automated1`
+
 
 <br/><br/>
 **References**
 Bolger, A. M., Lohse, M., & Usadel, B. (2014). Trimmomatic: a flexible trimmer for Illumina sequence data. Bioinformatics, 30, 2114-2120.
+
+Capella-Gutiérrez, S., Silla-Martínez, J. M., & Gabaldón, T. (2009). trimAl: a tool for automated alignment trimming in large-scale phylogenetic analyses. Bioinformatics, 25, 1972-1973.
 
 Dunning, L. T., Olofsson, J. K., Parisod, C., Choudhury, R. R., Moreno-Villena, J. J., Yang, Y., ... & Christin, P. A. (2019). Lateral transfers of large DNA fragments spread functional genes among grasses. Proceedings of the National Academy of Sciences, 116, 4416-4425.
 
