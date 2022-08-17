@@ -36,6 +36,7 @@ Example array submission script = mapping_array.sh
 
 <br/><br/>
 **[3.3] generate a consensus sequence for the mtgenome**
+
 To do this we used previously published shell scripts (from Dunning et al. (2019); adapted from Olofsson JK et al. (2016)). this generates a fasta alingment for genes/regionsof interest.   
 
 Shell script = ShortRead_to_alignment-mtGENOME.sh
@@ -61,6 +62,10 @@ Ambigious bases `N` are substituted for gaps `-` and then trimAl v.1.2rev59 (Cap
 
 `trimal -in mtGENOME.fa  -out mtGENOME-clean.fa  -automated1`
 
+<br/><br/>
+**[3.5] Inferring a maximum likelihood phylogeny*
+
+See step **[2.4] Inferring maximum likelihood phylogenies** for methods
 
 <br/><br/>
 **References**
