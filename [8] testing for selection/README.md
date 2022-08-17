@@ -26,7 +26,17 @@ required tree file = `Tree.Nwk`
 <br/><br/>
 **[8.2] branch-site wise dn/ds**
 
-Branch-site models (BSA and BSA1) models were used to infer if a gene was evolving under significant positive selection were implemented in codeml, distributed as part of the paml v.4.9j package (Yang, 2007). For these models we used the topology of the whole chloroplast genome tree.  
+Branch-site models (BSA and BSA1) models were used to infer if a gene was evolving under significant positive selection were implemented in codeml, distributed as part of the paml v.4.9j package (Yang, 2007). For these models we used the topology of the whole chloroplast genome tree. below is an example for a single branch.  
+
+`codeml M1a_M2a.ctl`
+
+required control file = `CP-Branch1.Nwk.ctl`
+
+required alignment file = `rpoC2_26554.phy`
+
+required tree file = `CP-Branch1.Nwk`
+
+
 
 <br/><br/>
 **References**
