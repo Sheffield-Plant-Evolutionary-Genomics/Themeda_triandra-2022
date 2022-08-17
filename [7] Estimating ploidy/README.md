@@ -14,7 +14,7 @@ An example of extracting the data for one chromosome is shown below
 
 
 <br/><br/>
-**[7.1] Generating a multi-sample mpileup file**
+**[7.2] Running HMMploidy**
 
 HMMploidy was used to infer ploidy for each chromosome using the followign commands:
 
@@ -24,6 +24,42 @@ HMMploidy was used to infer ploidy for each chromosome using the followign comma
 
 and example array script to run all 10 chromosomes is included `hmmploidy-array-100kb.sh`
 
+<br/><br/>
+**[7.3] Processing HMMploidy results**
+
+The percentage of 100 kb windows supporting each ploidy level was then calculated, ignoring those that were inferred to be haploid. It is a good idea to check thast all the chromosome results files ahve the same number of lines to ensure all samples were processed. Below are example commands for 1 chromosome
+
+
+`cat 1_RagTag.HMMploidy | sed -e '/Sample:/{n;N;N;N;N;N;N;N;N;N;d}'  |  grep "Sample:" -A 1 | sed -e '/^--$/,+d' | grep -v "Fil" | sed 's/1\s2\s3\s4\s5\s6/NA/g' > 1_RagTag.HMMploidy.1`
+
+`split -l 1 --numeric-suffixes=1 -a 4 1_RagTag.HMMploidy.1`
+
+`sed 's/\s/\n/g' -i x00*`
+
+`ls x* | while read line ; do grep -c "NA" "$line" >> count_"$line" ; done`
+
+`ls x* | while read line ; do grep -c "1" "$line" >> count_"$line" ; done`
+
+`ls x* | while read line ; do grep -c "2" "$line" >> count_"$line" ; done`
+
+`ls x* | while read line ; do grep -c "3" "$line" >> count_"$line" ; done`
+
+`ls x* | while read line ; do grep -c "4" "$line" >> count_"$line" ; done`
+
+`ls x* | while read line ; do grep -c "5" "$line" >> count_"$line" ; done`
+
+`ls x* | while read line ; do grep -c "6" "$line" >> count_"$line" ; done`
+
+`paste count_x00* > V1.Results`
+
+`rm count_x00*`
+
+
+
+
+
+
+Shell script to process Hmmploidy results: `hmmploidy-process-results.sh`
 
 
 <br/><br/>
