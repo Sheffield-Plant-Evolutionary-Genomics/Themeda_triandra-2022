@@ -44,10 +44,25 @@ Shell script = `sms_trees_array.sh`
 
 <br/><br/>
 
-**[5.5] Generating Coalescece spcies tree**
+**[5.6] Generating a desnsitree**
+
+A DensiTree v.2.2.7 (Bouckaert, 2010) plot was made for transformmed BUSCO genes trees using the chronopl function (lambda = 1) as part of the ape v.5.2 (Paradis & Schliep, 2019) package in R v.3.4.3. Below is the R command used for each tree:
+library(ape)
+
+`tree1<-read.tree("GENE1.tree")`
+`tree2<-root(tree1,c("T102_Jobson_2028","T130_Jobson_2520"),resolve.root = TRUE)`
+`write.tree(tree2, file = "GENE1_rooted.tree")`
+`tree3<-chronopl(tree2, 1, age.min = 1, age.max = NULL,node = "root", S = 1, tol = 1e-8,CV = FALSE, eval.max = 500, iter.max = 500)`
+`write.tree(tree3, file = "GENE1_chronopl.tree")`
+
+
+
+**[5.7] Generating Coalescece spcies tree**
 
 A coalescence species tree was generated from the individual gene trees using ASTRAL v.5.7.5 (Zhang et al., 2018) after collapsing branches with < 10% bootstrap support using Newick utilities v.1.6 (Junier & Zdobnov, 2010). Phyparts v.0.0.1 (Smith et al., 2015) was used to evaluate individual gene tree support for the coalescence species tree. The results were visualised using the phypartspiecharts.py python script written by M. Johnson (available from: https://github.com/mossmatters/phyloscripts/blob/master/phypartspiecharts).
  
+
+
 
 **References**
 
