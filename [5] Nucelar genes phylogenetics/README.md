@@ -79,7 +79,7 @@ Generating astral tree
 
 `java -jar astral.5.7.5.jar -q o astral.BUSCO-BS10.tree -i BUSCO-BS10.tree -t 2 -o astral.scored-t2.BUSCO-BS10.tree 2> astral.t2.log`
 
-Evaluating support for astral. The astral.BUSCO-BS10.tree was manually rooted before the next step, and the rooted gene trees from **[5.6] Generating a desnsitree** were used, all placein a directory called `THEM_ROOTED_GENE_TREES`. The `-s` paramater was used with various thresholds. 
+Evaluating support for astral. The astral.BUSCO-BS10.tree was manually rooted before the next step, and the rooted gene trees from **[5.6] Generating a desnsitree** were used, all in a directory called `THEM_ROOTED_GENE_TREES`. The `-s` paramater was used with various thresholds. 
 
 `java -jar phyparts-0.0.1-SNAPSHOT-jar-with-dependencies.jar -d THEM_ROOTED_GENE_TREES -m rooted_astral.tree -a 1 -v -o Them_phyparts10 -s 10`
 
