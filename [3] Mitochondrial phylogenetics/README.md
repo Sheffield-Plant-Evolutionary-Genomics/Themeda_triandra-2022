@@ -54,6 +54,7 @@ required perl script = split_annotated_seq.pl
 
 <br/><br/>
 **[3.4] Clean the mtGenome alingnment**
+
 Ambigious bases `N` are substituted for gaps `-` and then trimAl v.1.2rev59 (Capella-Gutiérrez et al., 2009) is used to clean the alingment. 
 
 `sed '/^>/ ! s/N/-/g' -i mtGENOME.fa` 
