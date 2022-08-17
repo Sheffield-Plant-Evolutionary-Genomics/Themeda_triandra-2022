@@ -22,7 +22,7 @@ other required files see  **[3.3] Generate a consensus sequence for the mtgenome
 <br/><br/>
 **[5.3] Process BUSCO gene alingemnts**
 
-The alignments were filtered to remove those of unusal length, remvoe short seqeunces, filter by number of taxa, and remvoe short alingments. We also cleaned the alingments as in step **[3.4] Clean the mtGenome alingnment**. This was all done with a custom shells script.
+The alignments were filtered to remove those of unusal length, remove short seqeunces, filter by number of taxa, and remove short alingments. We also cleaned the alingments as in step **[3.4] Clean the mtGenome alingnment**. This was all done with a custom shells script.
 
 Shell script = `Process-alignments.sh`
 
