@@ -35,7 +35,7 @@ Then map the data and generate sorted bam file
 Example array submission script = mapping_array.sh
 
 <br/><br/>
-**[3.3] generate a consensus sequence for the mtgenome**
+**[3.3] Generate a consensus sequence for the mtgenome**
 
 To do this we used previously published shell scripts (from Dunning et al. (2019); adapted from Olofsson JK et al. (2016)). this generates a fasta alingment for genes/regionsof interest.   
 
